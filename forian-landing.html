@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORIAN – Your Study Plug</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500;700&display=swap');
+    
+    body {
+        margin: 0;
+        font-family: 'Rajdhani', sans-serif;
+        background: #0B0C10;
+        color: white;
+        text-align: center;
+    }
+
+    header {
+        padding: 40px 20px;
+        background: linear-gradient(to bottom, #0B0C10, #161722);
+        border-bottom: 1px solid #00FF9F;
+    }
+
+    header h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 3rem;
+        margin: 0;
+        background: linear-gradient(90deg, #00FF9F, #D400FF, #FF00AA);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 15px rgba(212, 0, 255, 0.5);
+    }
+
+    header p {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .catchy-phrase {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        background: linear-gradient(90deg, #00FF9F, #D400FF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-style: italic;
+        text-shadow: 0 0 10px rgba(0, 255, 159, 0.3);
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.5rem; /* Smaller font size */
+        margin-bottom: 25px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        background: linear-gradient(90deg, #00FF9F, #8A2BE2, #FF00AA);
+        color: black;
+        padding: 16px 32px;
+        border: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(255, 0, 170, 0.9);
+    }
+
+    .btn-secondary {
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 15px 30px;
+        border: 1px solid #00FF9F;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 255, 159, 0.3);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(0, 255, 159, 0.1);
+        box-shadow: 0 0 20px rgba(0, 255, 159, 0.5);
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 50px 20px;
+        background: linear-gradient(to bottom, #161722, #0B0C10);
+    }
+
+    .feature-card {
+        background: rgba(11, 12, 16, 0.7);
+        border: 1px solid #8A2BE2;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 30px rgba(255, 0, 170, 0.5);
+        border-color: #FF00AA;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 15px;
+        color: #00FF9F;
+        font-size: 1.4rem;
+    }
+
+    .feature-card p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.5;
+    }
+
+    footer {
+        background: linear-gradient(to bottom, #0B0C10, #161722);
+        padding: 30px 20px;
+        font-size: 1rem;
+        border-top: 1px solid #D400FF;
+    }
+
+    footer p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Glow animations */
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px #00FF9F; }
+        50% { text-shadow: 0 0 20px #D400FF; }
+        100% { text-shadow: 0 0 5px #FF00AA; }
+    }
+
+    .glow-text {
+        animation: glow 3s infinite alternate;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FORIAN</h1>
+    <p>Your Study Plug</p>
+    <p class="catchy-phrase">"Where Students Become Scholars and Teachers Become Legends"</p>
+</header>
+
+<section class="hero">
+    <h2>Join thousands of students and teachers using FORIAN to learn smarter, not harder</h2>
+    
+    <button class="btn" onclick="window.location.href='auth.html'">Get Started</button>
+    <div>
+        <button class="btn-secondary" onclick="window.location.href='daily-quizz.html'">Daily Quiz Challenge</button>
+        <button class="btn-secondary" onclick="window.location.href='engagement.html'">Track Your Engagement</button>
+        <button class="btn-secondary" onclick="window.location.href='teacher-analytic.html'">Teacher Analytics</button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>🤖 Ask AI</h3>
+        <p>"Your 24/7 study buddy" - Instant answers to your toughest questions in multiple tones.</p>
+    </div>
+    <div class="feature-card">
+        <h3>📚 Notes & Resources</h3>
+        <p>"Knowledge shared is knowledge squared" - Access shared teacher notes and upload your own study materials.</p>
+    </div>
+    <div class="feature-card">
+        <h3>🏆 Leaderboard</h3>
+        <p>"Climb to the top!" - Stay motivated with points, quizzes, and weekly competitions.</p>
+    </div>
+    <div class="feature-card">
+        <h3>💬 Teacher Chat</h3>
+        <p>"Connect beyond classroom walls" - Get guidance and feedback directly from teachers.</p>
+    </div>
+</section>
+
+<section class="hero">
+    <h2 class="glow-text">Why FORIAN Works</h2>
+    <p class="catchy-phrase">"For Students: Learn at the speed of thought"</p>
+    <p class="catchy-phrase">"For Teachers: Teach beyond the classroom"</p>
+    <button class="btn-secondary" onclick="window.location.href='student-benefits.html'">Student Perks</button>
+    <button class="btn-secondary" onclick="window.location.href='teacher-benefits.html'">Teacher Advantages</button>
+</section>
+
+<footer>
+    &copy; 2025 FORIAN – Learning reimagined. <br> Made in Kenya 🇰🇪
+    <p class="catchy-phrase" style="font-size: 1rem;">"Education Revolutionized for the Digital Generation"</p>
+</footer>
+
+</body>
+</html>
